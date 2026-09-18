@@ -120,12 +120,13 @@ export default function Home() {
           <a href="#" className="flex items-center gap-3">
             <div className="relative h-16 w-16 shrink-0 md:h-20 md:w-20">
               <Image
-                src="/quest-logo.png"
-                alt="QUEST University Logo"
-                fill
-                className="object-contain"
-                priority
-              />
+  src="/quest-logo.png"
+  alt="QUEST University Logo"
+  fill
+  className="object-contain"
+  priority
+  unoptimized
+/>
             </div>
 
             <div>
