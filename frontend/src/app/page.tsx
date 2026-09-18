@@ -81,6 +81,7 @@ const features = [
 
 export default function Home() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [loginMenu, setLoginMenu] = useState(false);
   const [complaintId, setComplaintId] = useState("");
   const [message, setMessage] = useState("");
 
@@ -167,12 +168,39 @@ export default function Home() {
               Contact
             </a>
 
-            <a
-  href="/student-auth"
-  className="rounded-xl bg-[#006d92] px-5 py-3 text-white shadow-sm transition hover:bg-[#005674]"
->
-  Student Login
-</a>
+            <div className="relative">
+  <button
+    onClick={() => setLoginMenu(!loginMenu)}
+    className="rounded-xl bg-[#006d92] px-5 py-3 text-white shadow-sm transition hover:bg-[#005674]"
+  >
+    Portal Login ▼
+  </button>
+
+  {loginMenu && (
+    <div className="absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-xl border border-slate-200 bg-white py-2 shadow-xl">
+      <a
+        href="/student-auth"
+        className="block px-4 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-[#007ea7]"
+      >
+        Student Login
+      </a>
+
+      <a
+        href="/officer-auth"
+        className="block px-4 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-[#007ea7]"
+      >
+        Department Officer
+      </a>
+
+      <a
+        href="/admin-auth"
+        className="block px-4 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-[#007ea7]"
+      >
+        Admin Login
+      </a>
+    </div>
+  )}
+</div>
           </nav>
 
           {/* Mobile Button */}
@@ -193,6 +221,25 @@ export default function Home() {
               <a href="/track-complaint">Track Complaint</a>
               <a href="#categories">Departments</a>
               <a href="#contact">Contact</a>
+              <div className="mt-2 border-t border-slate-200 pt-4">
+  <p className="mb-3 text-xs font-bold uppercase tracking-wider text-slate-400">
+    Portal Login
+  </p>
+
+  <div className="flex flex-col gap-3">
+    <a href="/student-auth" className="text-[#007ea7]">
+      Student Login
+    </a>
+
+    <a href="/officer-auth" className="text-[#007ea7]">
+      Department Officer
+    </a>
+
+    <a href="/admin-auth" className="text-[#007ea7]">
+      Admin Login
+    </a>
+  </div>
+</div>
             </div>
           </div>
         )}
