@@ -102,7 +102,7 @@ export default function StudentAuthPage() {
 
         if (data.session) {
           setMessage("Student account created successfully.");
-          router.push("/");
+          router.push("/student-dashboard");
           router.refresh();
         } else {
           setMessage(
@@ -117,7 +117,7 @@ export default function StudentAuthPage() {
 
         if (error) throw error;
 
-        router.push("/");
+       router.push("/student-dashboard");
         router.refresh();
       }
     } catch (err) {
