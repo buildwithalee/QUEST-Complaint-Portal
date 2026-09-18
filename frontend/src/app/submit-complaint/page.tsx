@@ -18,8 +18,10 @@ import {
 
 import { supabase } from "@/lib/supabase";
 
-const API_URL = "http://127.0.0.1:8000";
-const API_FALLBACK_URL = "http://localhost:8000";
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
+const API_FALLBACK_URL = API_URL;
 
 const MAX_EVIDENCE_SIZE = 10 * 1024 * 1024;
 const ALLOWED_EVIDENCE_TYPES = [
