@@ -198,6 +198,13 @@ export default function Home() {
       >
         Admin Login
       </a>
+
+<a
+  href="/admin-auth?redirect=/vc-dashboard"
+  className="block px-4 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-[#007ea7]"
+>
+  VC / Management Login
+</a>
     </div>
   )}
 </div>
@@ -238,6 +245,13 @@ export default function Home() {
     <a href="/admin-auth" className="text-[#007ea7]">
       Admin Login
     </a>
+
+<a
+  href="/admin-auth?redirect=/vc-dashboard"
+  className="text-[#007ea7]"
+>
+  VC / Management Login
+</a>
   </div>
 </div>
             </div>

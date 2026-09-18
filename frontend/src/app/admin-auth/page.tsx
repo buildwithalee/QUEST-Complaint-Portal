@@ -62,7 +62,14 @@ export default function AdminAuthPage() {
         );
       }
 
-      router.replace("/admin-dashboard");
+     const params = new URLSearchParams(window.location.search);
+const redirect = params.get("redirect");
+
+router.replace(
+  redirect === "/vc-dashboard"
+    ? "/vc-dashboard"
+    : "/admin-dashboard"
+);
       router.refresh();
     } catch (err) {
       setError(
