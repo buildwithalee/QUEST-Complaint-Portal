@@ -119,13 +119,10 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
           <a href="#" className="flex items-center gap-3">
             <div className="relative h-16 w-16 shrink-0 md:h-20 md:w-20">
-              <Image
+              <img
   src="/quest-logo.png"
   alt="QUEST University Logo"
-  fill
-  className="object-contain"
-  priority
-  unoptimized
+  className="h-full w-full object-contain"
 />
             </div>
 
