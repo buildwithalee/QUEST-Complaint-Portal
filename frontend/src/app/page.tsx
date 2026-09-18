@@ -167,9 +167,12 @@ export default function Home() {
               Contact
             </a>
 
-            <button className="rounded-xl bg-[#006d92] px-5 py-3 text-white shadow-sm transition hover:bg-[#005674]">
-              Student Login
-            </button>
+            <a
+  href="/student-auth"
+  className="rounded-xl bg-[#006d92] px-5 py-3 text-white shadow-sm transition hover:bg-[#005674]"
+>
+  Student Login
+</a>
           </nav>
 
           {/* Mobile Button */}
